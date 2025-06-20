@@ -30,7 +30,7 @@ def get_country_outline(country: str):
         headings = soup.find_all(["h1", "h2", "h3", "h4", "h5", "h6"])
 
         # 4. Generate Markdown Outline
-        outline = ["## Contents", ""]
+        outline = []
         for heading in headings:
             level = int(heading.name[1])
             text = heading.get_text(strip=True)
